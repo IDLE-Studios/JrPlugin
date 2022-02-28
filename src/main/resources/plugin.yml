@@ -1,0 +1,7 @@
+name: Jrplugin
+version: '${project.version}'
+main: top.idlestudios.bukkit.jrplugin.Jrplugin
+api-version: 1.16
+prefix: JrPlugin
+authors: [ IDLE_Studios ]
+description: A Bukkit feature set 
