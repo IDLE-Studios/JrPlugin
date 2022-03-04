@@ -1,5 +1,6 @@
-language: en
 features:
   serverCrash:
     snow-tnt:
-      enabled: false
+      # Prevents server crashes caused by snowballs and TNT igniting
+      # https://www.bilibili.com/video/BV1Rm4y1d7bJ
+      enabled: true
