@@ -25,6 +25,7 @@ public class AntiSnowTNT implements Listener {
             Block block = e.getClickedBlock();
 
             // Right click only
+            assert block != null;
             if (action != Action.RIGHT_CLICK_BLOCK || block.getType() != Material.TNT)
             {
                 return;
