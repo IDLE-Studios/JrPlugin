@@ -1,0 +1,5 @@
+language: en
+features:
+  serverCrash:
+    snow-tnt:
+      enabled: false

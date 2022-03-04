@@ -4,8 +4,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import top.idlestudios.bukkit.jrplugin.locales.localeMgr;
-
 public final class JrPlugin extends JavaPlugin {
     public static FileConfiguration config = null;
 
@@ -18,18 +16,13 @@ public final class JrPlugin extends JavaPlugin {
             saveDefaultConfig();
             config = getConfig();
 
-            // Locale
-            localeMgr.doLocale();
-            System.out.println("You are using language: " + localeMgr.locale_lang);
-            System.out.println("Made by: " + localeMgr.meta_author);
-            System.out.println("For JrPlugin version: " + localeMgr.meta_version);
-
             // Completed
-            System.out.println(localeMgr.main_load_completed);
+            System.out.println("JrPlugin loaded.");
         } catch (Exception e)
         {
-            System.out.println(localeMgr.main_load_failed);
+            System.out.println("Unable to load JrPlugin");
             System.out.println("Caused by: " + e.getCause());
+            Bukkit.getPluginManager().disablePlugin(this);
         }
     }
 
