@@ -1,7 +1,19 @@
 name: Jrplugin
 version: '${project.version}'
-main: top.idlestudios.bukkit.jrplugin.Jrplugin
+main: top.idlestudios.bukkit.jrplugin.JrPlugin
 api-version: 1.16
 prefix: JrPlugin
 authors: [ IDLE_Studios ]
 description: A Bukkit feature set 
+commands:
+  jr:
+    description: Main command of JrPlugin
+
+permissions:
+  jr.*:
+    description: Main permission of JrPlugin
+    children:
+      jr.rename:
+        default: op
+        description: Item rename permission
+
