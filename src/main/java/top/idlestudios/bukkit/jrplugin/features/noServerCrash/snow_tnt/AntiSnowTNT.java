@@ -16,7 +16,7 @@ public class AntiSnowTNT implements Listener {
     @EventHandler
     public void onInteract(PlayerInteractEvent e)
     {
-        if (ModuleManager.AntiSnowTNTEnabled)
+        if (ModuleManager.AntiSnowTNT_Enabled)
         {
 
             Player player = e.getPlayer();
@@ -122,7 +122,7 @@ public class AntiSnowTNT implements Listener {
                     e.setCancelled(true);
                     player.kickPlayer(ChatColor.RED + "KICKED OF TRYING TO CRASH THE SERVER");
                 } catch (Exception ex) {
-                    System.out.println("Unable to process this event.");
+                    System.out.println("Unable to kick player or cancel PlayerInteractEvent");
                     System.out.println("Caused by: " + ex.getCause());
                 }
             }

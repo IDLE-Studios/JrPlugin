@@ -1,17 +1,14 @@
 package top.idlestudios.bukkit.jrplugin.features;
 
-import org.bukkit.Bukkit;
-import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.plugin.java.JavaPlugin;
 import top.idlestudios.bukkit.jrplugin.JrPlugin;
 
 public class ModuleManager {
     // noServerCrash
     // Snow-TNT
-    public static boolean AntiSnowTNTEnabled;
+    public static boolean AntiSnowTNT_Enabled;
 
     public static void load_features()
     {
-        AntiSnowTNTEnabled = JrPlugin.config.getBoolean("features.serverCrash.snow-tnt.enabled");
+        AntiSnowTNT_Enabled = JrPlugin.config.getBoolean("features.serverCrash.snow-tnt.enabled");
     }
 }
