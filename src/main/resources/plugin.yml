@@ -9,6 +9,10 @@ commands:
   jr:
     description: Main command of JrPlugin
 
+  jr-admin:
+    description: JrPlugin admin command
+    permission: jr.admin.*
+
 permissions:
   jr.*:
     description: Main permission of JrPlugin
@@ -16,4 +20,7 @@ permissions:
       jr.rename:
         default: op
         description: Item rename permission
+      jr.admin.*:
+        default: op
+        description: Admin command permission
 
